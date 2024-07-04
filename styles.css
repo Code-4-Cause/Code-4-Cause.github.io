@@ -184,7 +184,7 @@ main p {
 
 @media (max-width: 768px) {
     .background-section {
-        background-size: cover; /* Ensure the background covers the container */
+        background-size: contain; /* Ensure the background covers the container */
         height: 100vh; /* Adjust the height for smaller screens */
         width: 100%; /* Ensure the width fits the container */
     }
