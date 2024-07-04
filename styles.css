@@ -169,12 +169,14 @@ main p {
 .background-section {
     background-image: url('blueWave.png');
     background-position: center;
-    height: 800px;
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
     position: fixed;
     z-index: 0;
     top: 0;
     left: 0;
-    right: 0;
     opacity: 0; /* Initially hidden */
     animation: fadeInBackground 3s ease forwards; /* Fade in animation */
 }
@@ -387,10 +389,6 @@ p {
     
     .menu.visible {
         display: flex;
-    }
-    .background-section {
-        max-width: 100%;
-        height: auto;
     }
     
 }
