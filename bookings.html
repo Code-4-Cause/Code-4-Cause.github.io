@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -30,9 +30,10 @@
             background-position: center;
             position: relative;
         }
+
         .responsive {
-          max-width: 100%;
-          height: auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .container {
@@ -91,11 +92,49 @@
         button:hover {
             background-color: rgba(73, 111, 93);
         }
-        
+
         .meeting {
             font-size: auto;
             max-width: 100%;
             height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+                padding: 5%;
+            }
+
+            h1 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
+                font-size: 0.875rem; /* Adjust font size for smaller screens */
+            }
+
+            button {
+                padding: 0.5rem; /* Adjust button padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+                padding: 8%;
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Adjust font size for very small screens */
+            }
+
+            label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
+                font-size: 0.75rem; /* Adjust font size for very small screens */
+            }
+
+            button {
+                padding: 0.4rem; /* Adjust button padding for very small screens */
+            }
         }
     </style>
     <script>
@@ -103,12 +142,12 @@
             const menuButton = document.querySelector('.menu-button');
             const menu = document.querySelector('.menu');
 
-            menuButton.addEventListener('click', function () {
+            menuButton.addEventListener('click', function() {
                 menu.classList.toggle('visible');
             });
-
         });
-        document.getElementById('meetingForm').addEventListener('submit', function (event) {
+
+        document.getElementById('meetingForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Form validation
@@ -143,7 +182,6 @@
                 alert('Failed to book the meeting. Please try again.');
             });
         });
-        
     </script>
 </head>
 
@@ -153,7 +191,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="/meet-us.html">Meet the team</a></li>
-            <li><a href="/bookings.html">Book a meeting</a></li>  
+            <li><a href="/bookings.html">Book a meeting</a></li>
         </ul>
     </div>
     <header class="header1">
@@ -164,7 +202,7 @@
             <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/meet-us.html">Meet the team</a></li>
-                <li><a href="/bookings.html">Book a meeting</a></li>  
+                <li><a href="/bookings.html">Book a meeting</a></li>
             </ul>
         </nav>
     </header>
