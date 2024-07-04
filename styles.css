@@ -181,6 +181,14 @@ main p {
     animation: fadeInBackground 3s ease forwards; /* Fade in animation */
 }
 
+@media (max-width: 768px) {
+    .background-section {
+        background-size: cover; /* Ensure the background covers the container */
+        height: 100vh; /* Adjust the height for smaller screens */
+        width: 100%; /* Ensure the width fits the container */
+    }
+}
+
 @keyframes fadeInBackground {
     0% {
         opacity: 0;
