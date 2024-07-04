@@ -166,6 +166,12 @@
         .padding89 {
             padding: 100px;
         }
+        @media (max-width: 768px) {
+            .container1 {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+        }
     </style>
     <script>
         function showModal(element) {
@@ -208,14 +214,30 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             setInterval(animateWord, 3000); // Animation interval
+            const menuButton = document.querySelector('.menu-button');
+            const menu = document.querySelector('.menu');
+
+            menuButton.addEventListener('click', function () {
+                menu.classList.toggle('visible');
+            });
         });
     </script>
 </head>
 <body>
+    <button class="menu-button">Menu</button>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/meet-us.html">Meet the team</a></li>
+            <li><a href="/bookings.html">Book a meeting</a></li>  
+        </ul>
+    </div>
     <header class="header1">
-        <img class="logo" src="CODE4Cause.png" alt="" width="70" height="70">
+        <div class="logocontainer">
+            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
+        </div>
         <nav>
-            <ul>
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/meet-us.html">Meet the team</a></li>
                 <li><a href="/bookings.html">Book a meeting</a></li>  

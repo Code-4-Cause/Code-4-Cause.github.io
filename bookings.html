@@ -93,6 +93,15 @@
         }
     </style>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.menu-button');
+            const menu = document.querySelector('.menu');
+
+            menuButton.addEventListener('click', function () {
+                menu.classList.toggle('visible');
+            });
+
+        });
         document.getElementById('meetingForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
@@ -128,17 +137,28 @@
                 alert('Failed to book the meeting. Please try again.');
             });
         });
+        
     </script>
 </head>
 
 <body id="book-meeting-page">
+    <button class="menu-button">Menu</button>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/meet-us.html">Meet the team</a></li>
+            <li><a href="/bookings.html">Book a meeting</a></li>  
+        </ul>
+    </div>
     <header class="header1">
-        <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
+        <div class="logocontainer">
+            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
+        </div>
         <nav>
-            <ul>
+            <ul class="desktop-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/meet-us.html">Meet the team</a></li>
-                <li><a href="/bookings.html">Book a meeting</a></li>
+                <li><a href="/bookings.html">Book a meeting</a></li>  
             </ul>
         </nav>
     </header>

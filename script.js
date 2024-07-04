@@ -25,4 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         handleScrollAnimation();
     });
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.querySelector('.menu');
+
+    menuButton.addEventListener('click', function () {
+        menu.classList.toggle('visible');
+    });
+
+
+
+
+    
 });
+

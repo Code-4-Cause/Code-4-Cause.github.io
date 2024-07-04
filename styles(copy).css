@@ -1,3 +1,4 @@
+/* General styles */
 body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -14,16 +15,6 @@ body {
 /* Apply Montserrat for headers and Roboto Slab for paragraphs */
 .title, h3 {
     font-family: 'Poppins';
-}
-
-.mission {
-    padding-right: 5%;
-    padding-left: 5%;
-}
-
-.free {
-    padding-right: 10%;
-    padding-left: 10%;
 }
 
 h1 {
@@ -81,7 +72,7 @@ main {
 }
 
 main h1 {
-    font-size: 6vw;
+    font-size: 120px;
     font-weight: 300;
     margin-bottom: 20px;
     color: #8ea4d2; /* Updated */
@@ -126,7 +117,6 @@ main p {
     border-top-right-radius: 23px;
     border-bottom-left-radius: 23px;
     border-bottom-right-radius: 23px;
-    display: none;
 }
 
 .logocontainer {
@@ -152,10 +142,11 @@ main p {
 
 .codecause {
     color: #4c9f70; /* Updated */
-    font-size: 12vw;
+    font-size: 110px;
     opacity: 0; /* Initially hidden */
     animation: fadeIn 2s ease forwards; /* Fade in animation */
 }
+
 
 @keyframes fadeIn {
     0% {
@@ -167,7 +158,7 @@ main p {
 }
 
 .background-section {
-    background-image: url('blueWave.png');
+    background-image: url('Blush Wave Desktop Wallpaper.png');
     background-position: center;
     height: 800px;
     position: fixed;
@@ -210,10 +201,11 @@ main p {
 }
 
 h2, h3 {
+    text-align: center;
     color: rgba(73, 81, 111);
 }
 
-.span {
+.span{
     color: rgba(142, 164, 210);
 }
 
@@ -226,7 +218,7 @@ p {
     margin-bottom: 40px;
 }
 
-.services h2 {
+.services h2, .inspiration h2 {
     text-align: center;
 }
 
@@ -246,7 +238,23 @@ p {
 
 .endeavor h3 {
     margin-top: 0;
-    color: rgba(73, 111, 93);
+    color: rgba(73, 111, 93)
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .endeavors-container {
+        flex-direction: column;
+    }
+
+    .endeavor {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
 
 /* Scroll-triggered animations */
@@ -262,186 +270,4 @@ p {
 
 .span1 {
     color: rgba(98, 121, 184);
-}
-
-.why-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.why-image {
-    width: 80%;
-    height: auto;
-    padding-right: 10%;
-}
-
-.why-text {
-    padding-right: 10%;
-    padding-left: 6%;
-}
-
-.why-text h2 {
-    margin-top: 4%;
-}
-
-/* Inspiration section with image on the left */
-.inspiration-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 6%;
-}
-
-.inspiration-image {
-    width: 40%; /* Adjust the size as needed */
-    height: auto;
-    padding-left: 6%;
-    padding-right: 10%;
-}
-
-.inspiration {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-/* Responsive design */
-@media (max-width: 1200px) {
-    main h1 {
-        font-size: 80px;
-    }
-
-    .header1 {
-        width: 80%;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    body {
-        height: 100vh;
-        overflow: auto;
-    }
-
-    .menu-button {
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1001;
-        background: url('CODE4Cause.png') no-repeat center center;
-        background-size: contain;
-        width: 70px; /* Adjust the width as needed */
-        height: 70px; /* Adjust the height as needed */
-        border: none;
-        cursor: pointer;
-        padding: 0; /* Remove padding */
-        border-radius: 5px;
-        color: transparent; /* Hide text */
-        text-indent: -9999px; /* Hide text off-screen */
-        border-top-left-radius: 23px;
-        border-top-right-radius: 23px;
-        border-bottom-left-radius: 23px;
-        border-bottom-right-radius: 23px;
-        animation: spin 2s forwards;
-    }
-
-
-    .menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-    
-
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-
-    .menu ul li {
-        margin: 20px 0;
-    }
-
-    .menu ul li a {
-        text-decoration: none;
-        color: #f9f9f9;
-        font-size: 24px;
-    }
-    .menu ul li a:hover {
-      color: #8ea4d2
-    }
-    
-    .menu.visible {
-        display: flex;
-    }
-    
-}
-
-@media (max-width: 1000px) {
-    .endeavors-container {
-        flex-direction: column;
-    }
-
-    .endeavor {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .why-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .inspiration-section {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-    }
-
-    .why-image,
-    .inspiration-image {
-        width: 60%;
-        padding: 0;
-    }
-
-    .why-text,
-    .inspiration {
-        padding: 0 20px;
-    }
-}
-
-
-
-
-
-.responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (min-width: 769px) {
-    .header1 {
-        display: flex;
-    }
-
-    .menu-button {
-        display: none;
-    }
-
-    .menu {
-        display: none !important;
-    }
 }
