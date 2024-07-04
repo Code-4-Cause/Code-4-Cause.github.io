@@ -388,6 +388,10 @@ p {
     .menu.visible {
         display: flex;
     }
+    .background-section {
+        max-width: 100%;
+        height: auto;
+    }
     
 }
 
