@@ -169,10 +169,10 @@ main p {
 .background-section {
     background-image: url('blueWave.png');
     background-position: center;
-    background-size: cover; /* Ensures the image covers the entire container */
+    background-size: 100% 100%; /* Ensures the image scales to fit both dimensions */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    height: 100%;
+    width: 100%;
     position: fixed;
     z-index: 0;
     top: 0;
@@ -180,6 +180,7 @@ main p {
     opacity: 0; /* Initially hidden */
     animation: fadeInBackground 3s ease forwards; /* Fade in animation */
 }
+
 
 @media (max-width: 768px) {
     .background-section {
