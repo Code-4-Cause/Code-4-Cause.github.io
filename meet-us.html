@@ -78,6 +78,8 @@
             width: 90%;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             position: relative;
+            overflow: auto; /* Enable scrolling */
+            max-height: 90%; /* Ensure the modal doesn't exceed screen height */
         }
         .modal-content img {
             width: 200px;
@@ -150,7 +152,6 @@
             transition: font-size 0.5s ease-in-out; /* Smooth transition for font-size */
         }
 
-
         .container2 {
             width: 80%;
             margin: 0 auto;
@@ -166,12 +167,35 @@
         .padding89 {
             padding: 100px;
         }
+        @media (max-width: 1024px) {
+            .container1 {
+                width: 80%;
+            }
+        }
         @media (max-width: 768px) {
             .container1 {
                 grid-template-columns: 1fr;
                 width: 90%;
             }
         }
+        @media (max-width: 500px) {
+            .container1 {
+                width: 95%;
+            }
+            .modal-content {
+                width: 95%;
+                max-width: 95%;
+                padding: 10px;
+            }
+            .modal-content img {
+                width: 150px;
+                height: 150px;
+            }
+            .close {
+                font-size: 20px;
+            }
+        }
+
     </style>
     <script>
         function showModal(element) {
