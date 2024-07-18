@@ -15,46 +15,50 @@
     <style>
         body {
             font-family: Poppins;
-            background-color: #f4f4f4;
+            background-color: #506496;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-size: 1rem; /* Base font size */
-        }
-        #book-meeting-page {
-            background-image: url('polkaDotdesign.png'); /* Light cyan */
-            background-size: cover;
-            background-position: center;
             position: relative;
+            overflow: hidden;
         }
+
         .responsive {
             max-width: 100%;
             height: auto;
         }
+
         .container {
             background: #fff;
             padding: 3%; /* Increased padding for more space around the content */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better visibility */
-            width: 40%; /* Increased width for a larger container */
+            width: 30%; /* Increased width for a larger container */
+            z-index: 10;
+            position: relative;
         }
+
         h1 {
             text-align: center;
             color: rgba(73, 81, 111);
             font-size: 3rem; /* 24px */
             margin-bottom: 1rem; /* Added margin bottom for spacing */
         }
+
         .form-group {
             margin-bottom: 1.5rem; /* Increased margin bottom for more spacing between form groups */
         }
+
         label {
             display: block;
             margin-bottom: 0.5rem; /* Increased margin bottom for better spacing */
             color: rgba(98, 121, 184);
             font-size: 1rem; /* 16px */
         }
+
         input[type="email"],
         input[type="text"],
         input[type="datetime-local"] {
@@ -68,6 +72,7 @@
             color: rgba(73, 81, 111);
             font-size: 1rem; /* 16px */
         }
+
         button {
             width: 100%;
             background-color: rgba(76, 159, 112);
@@ -80,44 +85,204 @@
             font-family: Poppins;
             font-size: 1rem; /* 16px */
         }
+
         form#meetingForm button[type="submit"]:hover {
             background-color: rgba(73, 111, 93);
         }
+
         .meeting {
             font-size: auto;
             max-width: 100%;
             height: auto;
         }
+
         @media (max-width: 768px) {
             .container {
                 width: 80%;
                 padding: 5%;
             }
+
             h1 {
                 font-size: 2rem; /* Adjust font size for smaller screens */
             }
+
             label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
                 font-size: 0.875rem; /* Adjust font size for smaller screens */
             }
+
             button {
                 padding: 0.5rem; /* Adjust button padding for smaller screens */
             }
         }
+
         @media (max-width: 480px) {
             .container {
                 width: 90%;
                 padding: 8%;
             }
+
             h1 {
                 font-size: 1.5rem; /* Adjust font size for very small screens */
             }
+
             label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
                 font-size: 0.75rem; /* Adjust font size for very small screens */
             }
+
             button {
                 padding: 0.4rem; /* Adjust button padding for very small screens */
             }
         }
+
+        .email {
+            color: purple;
+        }
+
+        .circle {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: move 20s linear infinite;
+        }
+
+        /* Animation keyframes */
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(10vw, -10vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes moveReverse {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-10vw, 10vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* Generating multiple circles with different sizes, positions, and animation directions */
+        .circle:nth-child(1) {
+            width: 10vw;
+            height: 10vw;
+            top: 5%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+        .circle:nth-child(2) {
+            width: 15vw;
+            height: 15vw;
+            top: 25%;
+            left: 65%;
+            animation-delay: 2s;
+        }
+        .circle:nth-child(3) {
+            width: 20vw;
+            height: 20vw;
+            top: 55%;
+            left: 35%;
+            animation-delay: 4s;
+        }
+        .circle:nth-child(4) {
+            width: 12vw;
+            height: 12vw;
+            top: 75%;
+            left: 5%;
+            animation-delay: 6s;
+        }
+        .circle:nth-child(5) {
+            width: 18vw;
+            height: 18vw;
+            top: 10%;
+            left: 45%;
+            animation-delay: 8s;
+        }
+        .circle:nth-child(6) {
+            width: 14vw;
+            height: 14vw;
+            top: 35%;
+            left: 25%;
+            animation-delay: 1s;
+        }
+        .circle:nth-child(7) {
+            width: 16vw;
+            height: 16vw;
+            top: 45%;
+            left: 55%;
+            animation-delay: 3s;
+        }
+        .circle:nth-child(8) {
+            width: 9vw;
+            height: 9vw;
+            top: 65%;
+            left: 75%;
+            animation-delay: 5s;
+        }
+        .circle:nth-child(9) {
+            width: 13vw;
+            height: 13vw;
+            top: 85%;
+            left: 15%;
+            animation-delay: 7s;
+        }
+        .circle:nth-child(10) {
+            width: 17vw;
+            height: 17vw;
+            top: 15%;
+            left: 5%;
+            animation-delay: 9s;
+        }
+        .circle:nth-child(11) {
+            width: 11vw;
+            height: 11vw;
+            top: 25%;
+            left: 20%;
+            animation-delay: 1.5s;
+            animation: moveReverse 20s linear infinite;
+        }
+        .circle:nth-child(12) {
+            width: 13vw;
+            height: 13vw;
+            top: 65%;
+            left: 50%;
+            animation-delay: 4.5s;
+            animation: moveReverse 20s linear infinite;
+        }
+        .circle:nth-child(13) {
+            width: 8vw;
+            height: 8vw;
+            top: 5%;
+            left: 80%;
+            animation-delay: 7.5s;
+            animation: moveReverse 20s linear infinite;
+        }
+        .circle:nth-child(14) {
+            width: 12vw;
+            height: 12vw;
+            top: 75%;
+            left: 5%;
+            animation-delay: 10.5s;
+            animation: moveReverse 20s linear infinite;
+        }
+        .circle:nth-child(15) {
+            width: 15vw;
+            height: 15vw;
+            top: 5%;
+            left: 45%;
+            animation-delay: 12s;
+            animation: moveReverse 20s linear infinite;
+        }
+
+        /* Add more circles if needed */
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -127,6 +292,7 @@
                 menu.classList.toggle('visible');
             });
         });
+
         document.getElementById('meetingForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
             // Form validation
@@ -160,47 +326,64 @@
         });
     </script>
 </head>
+
 <body id="book-meeting-page">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
     <div class="small-logo"></div>
+    
     <button class="menu-button">Menu</button>
-    <div class="menu">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/meet-us.html">Meet the team</a></li>
-            <li><a href="/bookings.html">Book a meeting</a></li>
-        </ul>
-    </div>
-    <header class="header1">
-        <div class="logocontainer">
-            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
-        </div>
-        <nav>
-            <ul class="desktop-menu">
+        <div class="menu">
+            <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/meet-us.html">Meet the team</a></li>
                 <li><a href="/bookings.html">Book a meeting</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <h1 class="meeting">Book a Meeting</h1>
-        <form id="meetingForm" action="https://formspree.io/f/mjkbbbny" method="POST">
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+        </div>
+        <header class="header1">
+            <div class="logocontainer">
+                <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
             </div>
-            <div class="form-group">
-                <label for="business">Business Name:</label>
-                <input type="text" id="business" name="business" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Preferred Meeting Time:</label>
-                <input type="datetime-local" id="time" name="time" required>
-            </div>
-            <button type="submit">Book Meeting</button>
-        </form>
-    </div>
-</body>
-</body> 
+            <nav>
+                <ul class="desktop-menu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/meet-us.html">Meet the team</a></li>
+                    <li><a href="/bookings.html">Book a meeting</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <h1 class="meeting">Book a Meeting</h1>
+            <form id="meetingForm" action="https://formspree.io/f/mjkbbbny" method="POST">
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="business">Business Name:</label>
+                    <input type="text" id="business" name="business" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Meeting Time:</label>
+                    <input type="datetime-local" id="time" name="time" required>
+                </div>
+                <button type="submit">Book Meeting</button>
+            </form>
+        </div>
+    </body>
+    </body> 
 
-</html>
+    </html>
