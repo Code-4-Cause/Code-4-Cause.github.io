@@ -90,7 +90,7 @@ main h1 {
     font-size: 6vw;
     font-weight: 300;
     margin-bottom: 20px;
-    color: #8ea4d2; /* Updated */
+    color: #b6c7ec; /* Updated */
 }
 
 main p {
@@ -157,9 +157,10 @@ main p {
 }
 
 .codecause {
-    color: #4c9f70; /* Updated */
+    color: #b49cd8; /* Updated */
     font-size: 12vw;
     opacity: 0; /* Initially hidden */
+    margin-top: 0;
     animation: fadeIn 2s ease forwards; /* Fade in animation */
 }
 
@@ -201,6 +202,7 @@ main p {
     position: relative;
     width: 100%;
     background-color: white;
+    margin-bottom: 1%;
 }
 
 @media (max-width: 768px) {
@@ -562,4 +564,32 @@ p {
     .menu {
         display: none !important;
     }
+}
+
+.footer-container {
+    margin-top:-40px;
+    background: #44517e;
+    padding-bottom: 3%; /* Increased padding for more space around the content */
+    padding-top: 3%;
+    width: 100%; /* Increased width for a larger container */
+    z-index: 10;
+    position: relative;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #f9f9f9;
+    text-align: center;
+    font-family: Poppins;
+    margin-top: 10px;
+} 
+
+.footer-container1 {
+    background: #49516F;
+    padding-bottom: 5%; /* Increased padding for more space around the content */
+    padding-top: 5%;
+    width: 100%; /* Increased width for a larger container */
+    z-index: 10;
+    position: relative;
+    margin-top: 20px;
 }
