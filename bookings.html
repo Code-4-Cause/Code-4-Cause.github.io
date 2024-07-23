@@ -8,9 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon-32x32.png" type="image/png">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
     <style>
@@ -22,9 +20,9 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-size: 1rem; /* Base font size */
+            font-size: 1rem;
             position: relative;
-            overflow: hidden;
+            overflow: auto;
         }
 
         .responsive {
@@ -33,11 +31,12 @@
         }
 
         .container {
+            margin-top: 30%;
             background: #fff;
-            padding: 3%; /* Increased padding for more space around the content */
+            padding: 3%;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better visibility */
-            width: 30%; /* Increased width for a larger container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
             z-index: 10;
             position: relative;
         }
@@ -45,46 +44,81 @@
         h1 {
             text-align: center;
             color: rgba(73, 81, 111);
-            font-size: 3rem; /* 24px */
-            margin-bottom: 1rem; /* Added margin bottom for spacing */
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem; /* Increased margin bottom for more spacing between form groups */
+            margin-bottom: 1.5rem;
         }
 
         label {
             display: block;
-            margin-bottom: 0.5rem; /* Increased margin bottom for better spacing */
+            margin-bottom: 0.5rem;
             color: rgba(98, 121, 184);
-            font-size: 1rem; /* 16px */
+            font-size: 1rem;
         }
 
         input[type="email"],
         input[type="text"],
         input[type="datetime-local"] {
             width: 100%;
-            padding: 0.5rem; /* Adjusted padding for better input size */
-            margin: 0.5rem 0; /* Adjusted margin for better spacing */
+            padding: 0.5rem;
+            margin: 0.5rem 0;
             display: inline-block;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
             color: rgba(73, 81, 111);
-            font-size: 1rem; /* 16px */
+            font-size: 1rem;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .radio-group label {
+            margin-bottom: 0;
+            margin-left: 0.5rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .additional-question {
+            margin-top: 1.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: rgba(73, 81, 111);
+            font-size: 1rem;
+            resize: vertical; /* Allows vertical resizing only */
+            min-height: 80px; /* Ensures a minimum height for better user experience */
         }
 
         button {
             width: 100%;
             background-color: rgba(76, 159, 112);
             color: white;
-            padding: 0.75rem; /* Adjusted padding for better button size */
-            margin-top: 1rem; /* Adjusted margin top for better spacing */
+            padding: 0.75rem;
+            margin-top: 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-family: Poppins;
-            font-size: 1rem; /* 16px */
+            font-size: 1rem;
         }
 
         form#meetingForm button[type="submit"]:hover {
@@ -104,15 +138,15 @@
             }
 
             h1 {
-                font-size: 2rem; /* Adjust font size for smaller screens */
+                font-size: 2rem;
             }
 
             label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
-                font-size: 0.875rem; /* Adjust font size for smaller screens */
+                font-size: 0.875rem;
             }
 
             button {
-                padding: 0.5rem; /* Adjust button padding for smaller screens */
+                padding: 0.5rem;
             }
         }
 
@@ -123,15 +157,15 @@
             }
 
             h1 {
-                font-size: 1.5rem; /* Adjust font size for very small screens */
+                font-size: 1.5rem;
             }
 
             label, input[type="email"], input[type="text"], input[type="datetime-local"], button {
-                font-size: 0.75rem; /* Adjust font size for very small screens */
+                font-size: 0.75rem;
             }
 
             button {
-                padding: 0.4rem; /* Adjust button padding for very small screens */
+                padding: 0.4rem;
             }
         }
 
@@ -146,7 +180,6 @@
             animation: move 20s linear infinite;
         }
 
-        /* Animation keyframes */
         @keyframes move {
             0% {
                 transform: translate(0, 0);
@@ -171,7 +204,6 @@
             }
         }
 
-        /* Generating multiple circles with different sizes, positions, and animation directions */
         .circle:nth-child(1) {
             width: 10vw;
             height: 10vw;
@@ -285,7 +317,6 @@
         .email {
             text-align: center;
         }
-        /* Add more circles if needed */
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -300,14 +331,21 @@
             event.preventDefault(); // Prevent the default form submission
             // Form validation
             const email = document.getElementById('email').value;
-            const business = document.getElementById('business').value;
-            const time = document.getElementById('time').value;
-            if (!email || !business || !time) {
-                alert('Please fill in all fields.');
+            const name = document.getElementById('name').value;
+            const datetime = document.getElementById('datetime').value;
+            const purpose = document.querySelector('input[name="purpose"]:checked');
+            const additionalInfo = document.getElementById('additional-info').value;
+
+            if (!email || !name || !datetime || !purpose) {
+                alert('Please fill in all required fields.');
                 return;
             }
+
             // Create the form data
             const formData = new FormData(this);
+            formData.append('purpose', purpose.value);
+            formData.append('additional-info', additionalInfo);
+
             // Send the form data using fetch API
             fetch(this.action, {
                 method: 'POST',
@@ -349,45 +387,73 @@
     <div class="small-logo"></div>
     
     <button class="menu-button">Menu</button>
-        <div class="menu">
-            <ul>
+    <div class="menu">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/meet-us.html">Meet the team</a></li>
+            <li><a href="/bookings.html">Book a meeting</a></li>
+        </ul>
+    </div>
+    <header class="header1">
+        <div class="logocontainer">
+            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
+        </div>
+        <nav>
+            <ul class="desktop-menu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/meet-us.html">Meet the team</a></li>
                 <li><a href="/bookings.html">Book a meeting</a></li>
             </ul>
-        </div>
-        <header class="header1">
-            <div class="logocontainer">
-                <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Book a Meeting</h1>
+        <form id="meetingForm" action="/submit-meeting">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
-            <nav>
-                <ul class="desktop-menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/meet-us.html">Meet the team</a></li>
-                    <li><a href="/bookings.html">Book a meeting</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="container">
-            <h1 class="meeting">Book a Meeting</h1>
-            <form id="meetingForm" action="https://formspree.io/f/mjkbbbny" method="POST">
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="datetime">Preferred Date and Time:</label>
+                <input type="datetime-local" id="datetime" name="datetime" required>
+            </div>
+            <div class="form-group">
+                <label for="purpose">Purpose:</label>
+                <div class="radio-group">
+                    <input type="radio" id="update" name="purpose" value="update" required>
+                    <label for="update">Website Update/Maintenance</label>
                 </div>
-                <div class="form-group">
-                    <label for="business">Business Name:</label>
-                    <input type="text" id="business" name="business" required>
+                <div class="radio-group">
+                    <input type="radio" id="creation" name="purpose" value="creation" required>
+                    <label for="creation">Website Creation</label>
                 </div>
-                <div class="form-group">
-                    <label for="time">Preferred Meeting Time:</label>
-                    <input type="datetime-local" id="time" name="time" required>
+            </div>
+            <div class="form-group additional-question">
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="4" placeholder="Enter additional information here..."></textarea>
                 </div>
-                <p class="email">Please check your email regurlarly after completing the form for a reply from us.</p>
-                <button type="submit">Book Meeting</button>
-            </form>
-        </div>
-    </body>
-    </body> 
 
-    </html>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</body>
+</html>
