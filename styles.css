@@ -106,6 +106,7 @@ main p {
 
 .padding-1 {
     padding: 95px;
+    margin-top: -50px;
 }
 
 .padding-3 {
@@ -157,10 +158,14 @@ main p {
 }
 
 .codecause {
-    color: #b49cd8; /* Updated */
+    background: linear-gradient();
+    background: -webkit-linear-gradient(106.5deg, rgb(188, 86, 225, 0.91) 23%, rgb(227, 178, 245, 0.8) 93%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;/* Updated */
     font-size: 12vw;
     opacity: 0; /* Initially hidden */
     margin-top: 0;
+    font-weight: bold;
     animation: fadeIn 2s ease forwards; /* Fade in animation */
 }
 
@@ -327,6 +332,10 @@ p {
 @media (max-width: 1200px) {
     main h1 {
         font-size: 80px;
+    }
+    .padding-1 {
+        padding: 95px;
+        margin-top: 30px;
     }
 
     .header1 {
