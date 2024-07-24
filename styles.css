@@ -158,10 +158,11 @@ main p {
 }
 
 .codecause {
-    background: linear-gradient();
-    background: -webkit-linear-gradient(106.5deg, rgb(188, 86, 225, 0.91) 23%, rgb(227, 178, 245, 0.8) 93%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;/* Updated */
+    background: linear-gradient(106.5deg, rgb(188, 86, 225, 0.91) 23%, rgb(227, 178, 245, 0.8) 93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
     font-size: 12vw;
     opacity: 0; /* Initially hidden */
     margin-top: 0;
