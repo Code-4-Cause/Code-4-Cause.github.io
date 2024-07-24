@@ -38,6 +38,7 @@ h1 {
 
 h2 {
     font-family: 'Poppins', sans-serif;
+    font-size: 40px;
 }
 
 p {
@@ -211,12 +212,27 @@ main p {
     margin-bottom: 1%;
 }
 
+h3 {
+    font-size: 30px;
+}
+
 @media (max-width: 768px) {
     .background-section {
         background-size: cover; /* Ensure the background covers the container */
         height: 100vh; /* Adjust the height for smaller screens */
         width: 100vw; /* Ensure the width fits the container */
     }
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    main p {
+        font-size: 18px;
+    }
+    
 }
 
 .positionrelative {
@@ -235,6 +251,7 @@ main p {
 h2, h3 {
     color: rgba(73, 81, 111);
 }
+
 
 .span {
     color: rgba(142, 164, 210);
