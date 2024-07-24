@@ -1,103 +1,604 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code4Cause</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon-32x32.png" type="image/png">
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
-</head>
-<body>
-    <div class="small-logo"></div>
-    <button class="menu-button">Menu</button>
-    <div class="menu">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/meet-us.html">Meet the Team</a></li>
-            <li><a href="/bookings.html">Book a Meeting</a></li>  
-        </ul>
-    </div>
-    <header class="header1">
-        <div class="logocontainer">
-            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
-        </div>
-        
-        <nav>
-            <ul class="desktop-menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/meet-us.html">Meet the Team</a></li>
-                <li><a href="/bookings.html">Book a Meeting</a></li>  
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="hero">
-            <div class="background-section">
-                <div class="padding-1" ></div>
-                    <h1 style="font-size:5vw;">We Are</h1>
-                    <h1 style="font-size:11vw;" class="codecause">Code4Cause</h1>
-                <div class="padding-2"></div>
-            </div>
-            <div class="padding-3"></div>
-            <div class="everythingelse">          
-            <div class="padding-4"></div>  
-                <section class="mission scroll-fade-in">
-                    <h2>Our Mission</h2>
-                    <p class="mission">Based in Richmond, Virginia, our initiative is to empower local businesses and organizations by creating a platform for them to advertise their business. As a nonprofit organization, we are dedicated to creating professional, custom-built websites at no cost to help small businesses thrive in this digital age. Through this organization, we aim to support our community and assist the growth of these businesses.</p>
-                </section>
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
-                <section class="services scroll-fade-in">
-                    <h2>Our Services Are <span class="span">FREE</span></h2>
-                    <p class="free">That means we will create, design, and customize your website to fit your needs at no cost.</p>
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
 
-                    <!-- Why section with image on the right -->
-                    <div class="why-section">
-                        <div class="why-text">
-                            <h2 class="why">Why?</h2>
-                            <p class="cause">Right now, many companies fail to reach a higher level due to their lack in websites. After we build a website tailored to your needs and services, consumers will be able to easily reach your company faster and more reliably.</p>
-                        </div>
-                        <img src="growthicon.png" alt="Why Image" class="why-image">
-                    </div>
-                </section>
+/* Additional modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
-                <!-- Inspiration section with image on the left -->
-                <div class="inspiration-section">
-                    <img src="pandemicicon.png" alt="Inspiration Image" class="inspiration-image">
-                    <section class="inspiration scroll-fade-in">
-                        <h2 class="inspiration">Our Inspiration</h2>
-                        <p class="para">Following the Coronavirus Pandemic in 2020, we realized many businesses shifted to online platforms and used apps to run their businesses. However, many small businesses do not have the knowledge or resources to go online and suffered tragically from the lockdown. As a result, we made it our mission to provide local businesses with custom-made websites to expand their reach and empower their success.</p>
-                    </section>
-                </div>
+/* Apply Montserrat for headers and Roboto Slab for paragraphs */
+.title, h3 {
+    font-family: 'Poppins';
+}
 
-                <section class="endeavors scroll-fade-in">
-                    <h2>Our Endeavors</h2>
-                    <div class="endeavors-container">
-                        <div class="endeavor scroll-fade-in">
-                            <h3>Website Building</h3>
-                            <p>Help empower small/local businesses by expanding their reach</p>
-                            <img src="computer.png" alt="" width="450" height="300" class = "responsive">
-                        </div>
-                        <div class="endeavor scroll-fade-in">
-                            <h3>Fighting Hunger</h3>
-                            <p>Using money that we raise we will help feed the homeless. This is a future goal of ours. </p>
-                            <img src="food.png" alt="" width="360" height="300" class = "responsive">
-                        </div>
-                    </div>
-                </section>
-                <div class="padding-4"></div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-container">
-                <p4 class="footer-text">This website was designed by Code4Cause 2024<br><br><br> <img src="instagrampic.png" alt="" width="40" height="40" > <br>@Code4Cause_org <br><br><br><img src="emailpic.png" alt="" width="25" height="25"> <br>support@code4cause.org </p4>
-            </div>
-        </footer>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+.mission {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.free {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+h1 {
+    font-family: 'Poppins';
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #6279b8; /* Updated */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9f9f9; /* Updated */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9f9f9; /* Updated */
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8ea4d2; /* Updated */
+}
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    font-size: 6vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #b6c7ec; /* Updated */
+}
+
+main p {
+    font-size: 24px;
+    font-weight: 400;
+    color: #49516f; /* Updated */
+    text-align: center;
+}
+
+.padding-2 {
+    padding: 60px;
+}
+
+.padding-1 {
+    padding: 95px;
+    margin-top: -50px;
+}
+
+.padding-3 {
+    padding: 400px;
+}
+
+.padding-4 {
+    padding: 20px;
+}
+
+.header1 {
+    background-color: rgba(98,121,184,.900); /* Updated */
+    color: #f9f9f9; /* Updated */
+    padding: 13px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    width: 1000px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    display: none;
+}
+
+.logocontainer {
+    width: 2.7%; /* 70px */
+    height: 2.7%; /* 70px */
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    animation: spin 2s forwards; /* Spin animation */
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg); /* 1 full rotation */
+    }
+}
+
+.codecause {
+    background: linear-gradient();
+    background: -webkit-linear-gradient(106.5deg, rgb(188, 86, 225, 0.91) 23%, rgb(227, 178, 245, 0.8) 93%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;/* Updated */
+    font-size: 12vw;
+    opacity: 0; /* Initially hidden */
+    margin-top: 0;
+    font-weight: bold;
+    animation: fadeIn 2s ease forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.background-section {
+    background-image: url('blueWave.png');
+    background-position: center;
+    background-size: cover; /* Ensures the image scales to fit both dimensions */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInBackground 3s ease forwards; /* Fade in animation */
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.everythingelse {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+@media (max-width: 768px) {
+    .background-section {
+        background-size: cover; /* Ensure the background covers the container */
+        height: 100vh; /* Adjust the height for smaller screens */
+        width: 100vw; /* Ensure the width fits the container */
+    }
+}
+
+.positionrelative {
+    position: relative !important;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: rgba(73, 81, 111);
+}
+
+.span {
+    color: rgba(142, 164, 210);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.mission, .services, .inspiration, .endeavors {
+    margin-bottom: 40px;
+}
+
+.services h2 {
+    text-align: center;
+}
+
+.endeavors-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.endeavor {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    text-align: center;
+}
+
+.endeavor h3 {
+    margin-top: 0;
+    color: rgba(73, 111, 93);
+}
+
+/* Scroll-triggered animations */
+.scroll-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.scroll-fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.span1 {
+    color: rgba(98, 121, 184);
+}
+
+.why-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.why-image {
+    width: 80%;
+    height: auto;
+    padding-right: 10%;
+}
+
+.why-text {
+    padding-right: 10%;
+    padding-left: 6%;
+}
+
+.why-text h2 {
+    margin-top: 4%;
+}
+
+/* Inspiration section with image on the left */
+.inspiration-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 6%;
+}
+
+.inspiration-image {
+    width: 40%; /* Adjust the size as needed */
+    height: auto;
+    padding-left: 6%;
+    padding-right: 10%;
+}
+
+.inspiration {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    main h1 {
+        font-size: 80px;
+    }
+    .padding-1 {
+        padding: 95px;
+        margin-top: 30px;
+    }
+
+    .header1 {
+        width: 80%;
+    }
+}
+
+.menu-button {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background: url('three-dashes-icon.png') no-repeat center center;
+    background-size: contain;
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    border-radius: 5px;
+    color: transparent; /* Hide text */
+    text-indent: -9999px; /* Hide text off-screen */
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+
+}
+
+.small-logo {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: url('CODE4Cause.png') no-repeat center center;
+    background-size: contain;
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    animation: spin 2s forwards;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto; /* Allow vertical scrolling if menu content exceeds viewport height */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 24px;
+}
+
+.menu ul li a:hover {
+    color: #8ea4d2;
+}
+
+.menu.visible {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .header1 {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .menu-button {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1001;
+        background: url('three-dashes-icon.png') no-repeat center center;
+        background-size: contain;
+        width: 70px; /* Adjust the width as needed */
+        height: 70px; /* Adjust the height as needed */
+        border: none;
+        cursor: pointer;
+        padding: 0; /* Remove padding */
+        border-radius: 5px;
+        color: transparent; /* Hide text */
+        text-indent: -9999px; /* Hide text off-screen */
+        border-top-left-radius: 23px;
+        border-top-right-radius: 23px;
+        border-bottom-left-radius: 23px;
+        border-bottom-right-radius: 23px;
+
+    }
+
+    .small-logo {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+        background: url('CODE4Cause.png') no-repeat center center;
+        background-size: contain;
+        width: 70px; /* Adjust the width as needed */
+        height: 70px; /* Adjust the height as needed */
+        border-top-left-radius: 23px;
+        border-top-right-radius: 23px;
+        border-bottom-left-radius: 23px;
+        border-bottom-right-radius: 23px;
+        animation: spin 2s forwards;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(44, 43, 43, 0.8);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.5s ease;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu ul li {
+        margin: 20px 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #f9f9f9;
+        font-size: 24px;
+    }
+
+    .menu ul li a:hover {
+        color: #8ea4d2;
+    }
+
+    .menu.visible {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+    .endeavors-container {
+        flex-direction: column;
+    }
+
+    .endeavor {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .why-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inspiration-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .why-image,
+    .inspiration-image {
+        width: 60%;
+        padding: 0;
+    }
+
+    .why-text,
+    .inspiration {
+        padding: 0 20px;
+    }
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .header1 {
+        display: flex;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .menu {
+        display: none !important;
+    }
+}
+
+.footer-container {
+    margin-top:-40px;
+    background: #44517e;
+    padding-bottom: 3%; /* Increased padding for more space around the content */
+    padding-top: 3%;
+    width: 100%; /* Increased width for a larger container */
+    z-index: 10;
+    position: relative;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #f9f9f9;
+    text-align: center;
+    font-family: Poppins;
+    margin-top: 10px;
+} 
+
+.footer-container1 {
+    background: #49516F;
+    padding-bottom: 5%; /* Increased padding for more space around the content */
+    padding-top: 5%;
+    width: 100%; /* Increased width for a larger container */
+    z-index: 10;
+    position: relative;
+    margin-top: 20px;
+}
