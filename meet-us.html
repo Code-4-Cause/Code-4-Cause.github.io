@@ -3,386 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team</title>
+    <title>Code4Cause</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon-32x32.png" type="image/png">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #49516F;
-            overflow: auto; /* Enable scrolling */
-        }
-        h1 {
-            margin: 20px 0;
-            font-weight: 700;
-            color: #333;
-        }
-        .container1 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-            background-color: white;
-            width: 60%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .person {
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .person:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        }
-        .person img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .person div {
-            padding: 15px;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: auto; /* Enable scrolling */
-            max-height: 90%; /* Ensure the modal doesn't exceed screen height */
-        }
-        .modal-content img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-        .modal-content .bio {
-            margin-top: 15px;
-            text-align: left;
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-        }
-        .blurred {
-            filter: blur(5px);
-        }
-        .middle {
-            text-align: center;
-            color: rgba(73, 111, 93);
-        }
-        .meet-title {
-            padding: 4%;
-            margin-bottom: 50px;
-            margin-top: 50px;
-            text-align: center;
-            font-size: 70px;
-            color: #49516F
-        }
-        .meet-title1 {
-            padding: 4%;
-            margin-bottom: 50px;
-            margin-top: 50px;
-            text-align: center;
-            font-size: 70px;
-            color: white
-        }
-        .journ {
-            padding: 2%;
-            margin-bottom: 50px;
-            margin-top: 50px;
-            text-align: center;
-            font-size: 50px;
-        }
-        .highlight-blue, .highlight-green, .highlight-purple {
-            font-weight: bold;
-            font-size: 20px;
-            transition: font-size 0.5s ease-in-out;
-        }
-
-        .highlight-blue {
-            color: #8EA4D2; /* DodgerBlue */
-        }
-
-        .highlight-green {
-            color: #4C9F70; /* LimeGreen */
-        }
-
-        .highlight-purple {
-            color: #674ea7; /* Purple */
-        }
-
-        .highlight-blue.pop, .highlight-purple.pop, .highlight-green.pop {
-            font-size: 150%;
-            transform: 0.5s ease-in-out;
-            transition: font-size 0.5s ease-in-out; /* Smooth transition for font-size */
-        }
-
-        .container2 {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .message {
-            text-align: center;
-            font-size: 20px;
-        }
-        .padding89 {
-            padding: 100px;
-        }
-        @media (max-width: 1024px) {
-            .container1 {
-                width: 80%;
-            }
-        }
-        @media (max-width: 768px) {
-            .container1 {
-                grid-template-columns: 1fr;
-                width: 90%;
-            }
-        }
-        @media (max-width: 500px) {
-            .container1 {
-                width: 95%;
-            }
-            .modal-content {
-                width: 95%;
-                max-width: 95%;
-                padding: 10px;
-            }
-            .modal-content img {
-                width: 150px;
-                height: 150px;
-            }
-            .close {
-                font-size: 20px;
-            }
-            .message {
-
-                font-size: 15px;
-            }
-            .highlight-blue, .highlight-green, .highlight-purple {
-
-                font-size: 15px;
-
-            }
-            .meet-title {
-                font-size: 55px;
-            }
-            .meet-title1 {
-                
-                font-size: 55px;
-            }
-        }
-
-    </style>
     <script>
-        function showModal(element) {
-            const modal = document.getElementById('modal');
-            const modalImg = modal.querySelector('img');
-            const modalName = modal.querySelector('.name');
-            const modalBio = modal.querySelector('.bio');
+function showModal(element) {
+    const modal = document.getElementById('modal');
+    const modalImg = modal.querySelector('img');
+    const modalName = modal.querySelector('.name');
+    const modalBio = modal.querySelector('.bio');
 
-            modalImg.src = element.querySelector('img').src;
-            modalName.innerHTML = element.querySelector('div').innerHTML;
-            modalBio.innerHTML = element.querySelector('.bio').innerHTML;
+    // Get the clicked person's image
+    modalImg.src = element.querySelector('img').src;
 
-            document.querySelector('.container1').classList.add('blurred');
-            modal.style.display = 'flex';
-        }
+    // Get the name from the clicked person's div
+    modalName.innerHTML = element.querySelector('div').childNodes[0].nodeValue.trim(); // Get the name text
 
-        function closeModal() {
-            const modal = document.getElementById('modal');
-            document.querySelector('.container1').classList.remove('blurred');
-            modal.style.display = 'none';
-        }
+    // Get the bio from the hidden div
+    modalBio.innerHTML = element.querySelector('.bio').innerHTML;
 
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
+    // Show the modal
+    modal.style.display = 'flex';
+    
+    // Blur the background
+    document.querySelector('.container1').classList.add('blurred');
+}
 
-        function animateWord() {
-            const highlights = document.querySelectorAll('.highlight-blue, .highlight-green, .highlight-purple');
-            if (highlights.length === 0) return; // No highlights to animate
-            const randomIndex = getRandomInt(highlights.length);
-            const word = highlights[randomIndex];
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Hide the modal
+    document.querySelector('.container1').classList.remove('blurred'); // Remove blur from background
+}
 
-            word.classList.add('pop');
-            console.log(`Animating word: ${word.innerText}`); // Debugging
-
-            setTimeout(() => {
-                word.classList.remove('pop');
-            }, 1000); // Animation duration
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(animateWord, 3000); // Animation interval
-            const menuButton = document.querySelector('.menu-button');
-            const menu = document.querySelector('.menu');
-
-            menuButton.addEventListener('click', function () {
-                menu.classList.toggle('visible');
-            });
-        });
+// Close modal on clicking outside of modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
     </script>
 </head>
 <body>
-    <div class="small-logo"></div>
-    <button class="menu-button">Menu</button>
-    <div class="menu">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/meet-us.html">Meet the Team</a></li>
-            <li><a href="/bookings.html">Book a Meeting</a></li>  
-        </ul>
-    </div>
     <header class="header1">
         <div class="logocontainer">
-            <img class="logo" src="CODE4Cause.png" alt="Code4Cause">
-        </div>
+            <img class="logo" src="Code4Cause.png" alt="Code4Cause Logo">
+        </div> 
         <nav>
             <ul class="desktop-menu">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/meet-us.html">Meet the Team</a></li>
-                <li><a href="/bookings.html">Book a Meeting</a></li>  
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="meet-us.html">Meet the Team</a></li>
+                <li><a href="bookings.html">Book a Meeting</a></li>  
+                <li><a href="portfolio.html">Website Portfolio</a></li>
             </ul>
         </nav>
     </header>
-    <div class="padding89"></div>
-    <div class="container2">
-        <h1 class="meet-title">Our Journey</h1>
-        <p class="message">The idea for <span class="highlight-blue">Code4Cause</span> was really unforeseen, however, the 
-            <span class="highlight-green">passion</span> to make an impact on our community by following our interests 
-            was always present. It really all began one night where we all were sitting on our friends porch, staring 
-            into the cosmos, thinking about what we could do to <span class="highlight-purple">benefit our community</span>. 
-            After generating and contemplating many ideas - some that we all laughed about and some that had great potential - 
-            we ultimately decided to call it a night with our heads full of 
-            <span class="highlight-green">ideas and determination</span>. The next day while we were walking, we decided 
-            to get some ice cream at a new shop. We went on google to find the shop’s timings and to see what flavors they had. 
-            To our surprise, we found that the ice cream shop didn’t have a <span class="highlight-blue">website</span> as it was 
-            a local family-owned store which likely did not have the <span class="highlight-green">resources</span> or 
-            <span class="highlight-green">skills</span> to create a website. In that moment, we knew it was our opportunity to 
-            use our love for <span class="highlight-blue">computer science</span> to help our community. We realized that so many 
-            local and small business didn’t have access to <span class="highlight-green">modern</span> software and there truly was 
-            a <span class="highlight-purple">digital divide</span> separating these companies from success. What the ice cream shop, 
-            among other local businesses, needed was a web development agency that could design custom websites at no cost to the company. 
-            Invigorated, we went home, and a few texts between the future co-founders later, and 
-            <span class="highlight-blue">Code4Cause</span> was officially <span class="highlight-green">born</span>.
-        </p>
+
+    <img src="BentLine2.png" alt="Background Design" style="margin-top: 10%; width: 100%; max-width: 1400px;">  
+    <h1 style="color: white; margin-top: -4%;">Our Journey</h1>
+    <center>
+        <div style="background-color: white; height: 1px; width: 900px; margin-top: -6%;"></div>
+    </center>
+    <div class="parallelogram2">
+        <p class="content2">Code4Cause emerged unexpectedly from our passion to impact the community. One night, while pondering ideas on a friend's porch, we decided to brainstorm ways to help. The next day, while searching for a local ice cream shop's hours, we discovered it lacked a website. This highlighted the digital divide facing many small businesses. Realizing we could use our computer science skills to bridge this gap, we were inspired to create a web development agency that offers custom websites at no cost. Thus, Code4Cause was born.</p>
     </div>
-    <h1 class="meet-title1">Meet the Team</h1>
+    
+    <h1 style="color: white; margin-top: 8%;">Meet the Team</h1>
+    <center>
+        <div style="background-color: white; height: 1px; width: 900px; margin-top: -6%;"></div>
+    </center>
 
     <div class="container1">
-        <div class="person" onclick="showModal(this)">
-            <img src="Anish.png" alt="Anish Aruru">
-            <div>Anish Aruru<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Lead Manager</p>
-                <p>Hello, I am Anish Aruru, and I am a junior at the Maggie L. Walker Governor's School. I love learning new things and fueling my curiosity. My dream fields are coding and engineering. In my free time I love playing pickleball and the guitar. I hope to be able to make an impact on my community through Code4Cause and I am excited for the future!!
-</p>
-            </div>
+      <div class="person" onclick="showModal(this)">
+        <img src="Anish.png" alt="Anish Aruru" style="border: 4px solid white;">
+        <div class="name">Anish Aruru<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Lead Manager</p>
+            <p>Hello, I am Anish Aruru, and I am a junior at the Maggie L. Walker Governor's School. I love learning new things and fueling my curiosity. My dream fields are coding and engineering. In my free time I love playing pickleball and the guitar. I hope to be able to make an impact on my community through Code4Cause and I am excited for the future!!
+            </p>
+        </div>
+      </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Saket.png" alt="Saket Sambaraju" style="border: 4px solid white;">
+        <div class="name">Saket Sambaraju<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Project Manager</p>
+            <p>Hi, I am Saket Sambaraju, and I am a junior at Maggie Walker Governor's School. In my free time, I love to play table tennis and program with new designs and styles. I aspire to become a future computer science engineer in order to help better this world through computer science. I am excited for Code4Cause and the impact that we will produce in the future!</p>
+        </div>
         </div>
 
-        <div class="person" onclick="showModal(this)">
-            <img src="Saket.png" alt="Saket Sambaraju">
-            <div>Saket Sambaraju<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Project Manager</p>
-                <p>Hi, I am Saket Sambaraju, and I am a rising junior at Maggie Walker Governor's School. In my free time, I love to play table tennis and program with new designs and styles. I aspire to become a future computer science engineer in order to help better this world through computer science. I am excited for Code4Cause and the impact that we will produce in the future!</p>
-            </div>
+    <div class="person" onclick="showModal(this)">
+        <img src="Eshwar-modified.png" alt="Eshwar Bejugam" style="border: 4px solid white;">
+        <div class="name">Eshwar Bejugam<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of Operations and Logistics<br>Charity Manager</p>
+            <p>Hi, I am Eshwar Bejugam and I am a junior at J.R. Tucker High School in the International Baccalaureate program. I love math and computer science and I aspire to pursue data science in the future. In my free time, I enjoy playing chess and pickleball. I’m excited to use my love for technology to help the community!
+            </p>
+        </div>
         </div>
 
-        <div class="person" onclick="showModal(this)">
-            <img src="Eshwar.png" alt="Eshwar Bejugam">
-            <div>Eshwar Bejugam<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Co-Founder<br>Director of Operations and Logistics<br>Charity Manager</p>
-                <p>Hi, I am Eshwar Bejugam and I am a rising junior at J.R. Tucker High School. I love math and computer science and I aspire to pursue data science in the future. In my free time, I enjoy playing chess and pickleball. I’m excited to use my love for technology to help the community!
-</p>
-            </div>
+    <div class="person" onclick="showModal(this)">
+        <img src="Sriram.png" alt="Sriram Darsi" style="border: 4px solid white;">
+        <div class="name">Sriram Darsi<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of External Communications</p>
+            <p>Hi! My name is Sriram Darsi and I am a junior at Henrico High School. In my free time, I love to listen to music, play basketball, and watch sports. I am looking forward to implementing various softwares in different socioeconomic areas in my community. 
+        </p>
+        </div>
         </div>
 
-        <div class="person" onclick="showModal(this)">
-            <img src="Ram.png" alt="Sriram Darsi">
-            <div>Sriram Darsi<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Co-Founder<br>Director of External Communications</p>
-                <p>Hi! My name is Sriram Darsi and I am a Rising Junior at Henrico High School. In my free time, I love to listen to music, play basketball, and watch sports. I am looking forward to implementing various softwares in different socioeconomic areas in my community. 
-</p>
-            </div>
+    <div class="person" onclick="showModal(this)">
+        <img src="Karan.jpeg" alt="Karan Nair" style="border: 4px solid white;">
+        <div class="name">Karan Nair<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Director of Programming</p>
+            <p>My name is Karan Nair and I am a junior at Maggie L. Walker Governor's School. In my free time I like to workout, play soccer, and cad. In the future I want to pursue engineering with a minor in computer science. Im experienced in python, html, and css, and hope to help lead Code4Cause to a bright future!
+          </p>
         </div>
+       </div>
 
-        <div class="person" onclick="showModal(this)">
-            <img src="IMG_1542.jpeg" alt="Karan Nair">
-            <div>Karan Nair<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Director of Programming</p>
-                <p>My name is Karan Nair and I and a junior at Maggie L. Walker Governor’s School. In my free time I like to workout, play soccer, and cad. In the future I want to pursue engineering with a minor in computer science. Im experienced in python, html, and css, and hope to help lead Code4Cause to a bright future!
-</p>
-            </div>
+    <div class="person" onclick="showModal(this)">
+        <img src="Jithesh.png" alt="Jithesh Chevuru" style="border: 4px solid white;">
+        <div class="name">Jithesh Chevuru<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of marketing</p>
+            <p class="t">My name is Jithesh Chevuru and I am the current director of marketing. I am a junior at Henrico High School and I love to play tennis and volleyball. In my free time I like to talk to my friends and learn new things. I hope to spread Code4Cause’s mission across the nation. </p>
         </div>
-
-        <div class="person" onclick="showModal(this)">
-            <img src="Jithesh.png" alt="Jithesh Chevuru">
-            <div>Jithesh Chevuru<br><span class="span1">About Me &#8594;</span></div>
-            <div class="bio" style="display:none;">
-                <p class="middle">Co-Founder<br>Director of marketing</p>
-                <p>My name is Jithesh Chevuru and I am the current director of marketing. Next year, I will be a junior at Henrico High School. I love to play tennis and volleyball. In my free time I like to talk to my friends and learn new things. I hope to spread Code4Cause’s mission across the nation. </p>
-            </div>
         </div>
     </div>
 
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img src="" alt="">
-            <div class="name"></div>
-            <div class="bio"></div>
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="" alt="">
+          <div style="color: black;" class="name" style="display: flex; justify-content: center;"></div>
+          <div class="bio" style="display: block; justify-content: center;"></div>
+          <div class="t" style="display: block; justify-content: center;"></div>
+      </div>
+  </div>
+
+  <footer>
+    <div class="footer-container" style="display: flex; align-items: center;">
+        <img class="footerlogo" src="CODE4Cause.png" alt="Code 4 Cause Logo"> <!-- Logo to the left -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-left: 1%;">
+            <img class="instapic" src="cropped-image.png" alt="Instagram Icon">
+            <img class="emailpic" src="emailpic.png" alt="Email Icon">
         </div>
+        <div class="socialinfobox" style="display: flex; flex-direction: column; text-align: left; text-decoration: none;">
+            <p class="instatext"><span class="code4causeorg" style="text-decoration: none;"><a href="https://www.instagram.com/code4cause_org/" target="_blank">code4cause_org</a></span></p><p class="instatext">support@code4cause.org</p>
     </div>
-</body>
-<footer>
-    <div class="footer-container1">
-        <p4 class="footer-text">This website was designed by Code4Cause 2024<br><br><br> <img src="instagrampic.png" alt="" width="40" height="40" > <br>@Code4Cause_org <br><br><br><img src="emailpic.png" alt="" width="25" height="25"> <br>support@code4cause.org </p4>
+    <div style="display: flex; margin-left: 15%; text-decoration: none; margin-right: 10%;">
+        <p class="linktree">
+            <span class="link" style="margin-bottom: 4%;"><a href="Home.html" class="footerlink" style="text-decoration:none; ">Home</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="meet-us.html" class="footerlink" style="text-decoration:none; ">Meet the Team</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="bookings.html" class="footerlink" style="text-decoration:none; ">Book a Meeting</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="portfolio.html" class="footerlink" style="text-decoration:none; ">Website Portfolio</a></span></p>
+    </div>    
+    <div>
+        <button onclick="location.href='mailto:code4causenonprofit@gmail.com';" class="contact-us">
+            Contact Us
+        </button>
+    </div>    
     </div>
 </footer>
+  
+</body>
 </html>
